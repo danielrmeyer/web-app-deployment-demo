@@ -1,7 +1,10 @@
-# vagrant-django-rest-demo
-Demonstrate vagrant multi-machine setup with postgres db and django rest api.  
+# Web application deployment demo
 
-To run the demo with Vagrant:
+Demo Django application including automated development environment with Vagrant, automated
+infrastructure using aws and terraform.
+
+## Creating the local development environment
+
 These steps will create an exact multi-machine local clone
 of what we will later run in production.  If your code is working
 here it is almost certainly going to work in our production environments.
@@ -25,6 +28,8 @@ here it is almost certainly going to work in our production environments.
 9. ```sudo python manage.py runserver 0.0.0.0:80```
 
 On host machine visit http://localhost:8000/snippets/ in your browser.
+
+## Creating the staging/production environment and deploying
 
 Thanks to http://www.django-rest-framework.org/ for the great tutorial which I used to get this example going.
 Also, thanks to https://github.com/jackdb/pg-app-dev-vm for the postgres provisioning script.
