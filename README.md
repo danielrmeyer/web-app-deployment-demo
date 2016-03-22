@@ -1,13 +1,14 @@
 # Web application deployment demo
 
-Demo Django application including automated development environment with Vagrant, automated
-infrastructure using aws and terraform.
+Demo Django application including automated development environment with Vagrant and
+infrastrucutre as code using aws and terraform. Deployment automation handled with fabric.
 
 ## Creating the local development environment
 
 These steps will create an exact multi-machine local clone
 of what we will later run in production.  If your code is working
-here it is almost certainly going to work in our production environments.
+here it is almost certainly going to work in our production environments
+we will create in the next step.
 
 1. Install vagrant and virtualbox.
 
