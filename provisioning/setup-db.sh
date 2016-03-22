@@ -86,7 +86,7 @@ fi
 # Update package list and upgrade all packages
 apt-get update
 apt-get -y upgrade
-
+apt-get -y emacs
 apt-get -y install "postgresql-$PG_VERSION" "postgresql-contrib-$PG_VERSION"
 
 PG_CONF="/etc/postgresql/$PG_VERSION/main/postgresql.conf"

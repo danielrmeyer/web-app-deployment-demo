@@ -22,11 +22,13 @@ we will create in the next step.
 
 6. ```cd /vagrant/rest_demo```
 
-7. ```python manage.py migrate```
+7. ```sudo pip install -r requirements.txt```
 
-8. ```python manage.py createsuperuser```
+8. ```python manage.py migrate```
 
-9. ```sudo python manage.py runserver 0.0.0.0:80```
+9. ```python manage.py createsuperuser```
+
+10. ```sudo python manage.py runserver 0.0.0.0:80```
 
 On host machine visit http://localhost:8000/snippets/ in your browser.
 
