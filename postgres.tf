@@ -22,8 +22,8 @@ resource "aws_instance" "postgres" {
   }
 
   provisioner "file" {
-    source = "provisioning/setup_db.sh"
-    destination = "/tmp/provisioning/setup_db.sh"
+    source = "provisioning/setup-db.sh"
+    destination = "/tmp/provisioning/setup-db.sh"
     connection {
       type = "ssh"
       user = "ubuntu"
@@ -31,7 +31,7 @@ resource "aws_instance" "postgres" {
     }
   }
   provisioner "remote-exec" {
-    inline = ["sudo bash /tmp/provisioning/setup_db.sh"]
+    inline = ["sudo bash /tmp/provisioning/setup-db.sh"]
     connection {
       type = "ssh"
       user = "ubuntu"

@@ -24,8 +24,16 @@ resource "aws_instance" "webapp" {
   }
 
   provisioner "file" {
-    source = "provisioning/setup_webapp.sh"
-    destination = "/tmp/provisioning/setup_webapp.sh"
+    source = "provisioning/setup-webapp.sh"
+    destination = "/tmp/provisioning/setup-webapp.sh"
+    connection {
+      type = "ssh"
+      user = "ubuntu"
+      key_file = "${var.ssh_key_path}"
+    }
+  }
+  provisioner "remote-exec" {
+    inline = ["sudo bash /tmp/provisioning/setup-webapp.sh"]
     connection {
       type = "ssh"
       user = "ubuntu"
