@@ -15,6 +15,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "web" do |web|
     web.vm.box = "ubuntu/trusty64"
     web.vm.host_name = "webapp"
+    web.vm.synced_folder "rest_demo", "/var/www",
+                         owner: "ubuntu", group: "ubuntu"
     web.vm.provision :shell, :path => 'provisioning/setup-webapp.sh'
     web.vm.provider :virtualbox do |v|
         web.vm.network "private_network", ip: "172.31.32.52"

@@ -20,7 +20,7 @@ we will create in the next step.
 
 5. ```vagrant ssh web```
 
-6. ```cd /vagrant/rest_demo```
+6. ```cd /var/www```
 
 7. ```sudo pip install -r requirements.txt```
 
