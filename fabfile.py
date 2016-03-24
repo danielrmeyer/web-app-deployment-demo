@@ -38,7 +38,8 @@ def copy_code():
 
 @grok_env
 def clear_code_dir():
-    run("sudo rm -r /var/www/*")
+    with settings(warn_only=True):
+        run("sudo rm -r /var/www/*")
 
 @grok_env
 def install_requirements():
