@@ -37,9 +37,9 @@ On host machine visit http://localhost:8000/snippets/ in your browser.
 These steps will create a production environment in EC2 using Terraform.
 fabric will be used to automate deployment.
 
-* Install Terraform
+* Install Terraform (https://www.terraform.io/intro/getting-started/install.html)
 
-* Create the tfvars file in this directory
+* Create the terraform.tfvars file in this directory
 ```
 user_name = "<yourname>"
 environment = "<what you want to call this environment>"
@@ -50,9 +50,9 @@ ssh_key_name = "<name of the key>"
 vpc_id = "vpc-########"
 ```
 
-* install fabric "pip install fabric"
+* install fabric ```pip install fabric```
 
-* run ```terraform plan``` to see a list of infrastructure to bring up.
+* run ```terraform plan``` to see a list of infrastructure to bring up and make sure your .tfvars file is OK.
 
 * run ```terraform apply``` to provision infrastructure
 
