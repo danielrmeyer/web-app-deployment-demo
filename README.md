@@ -34,5 +34,35 @@ On host machine visit http://localhost:8000/snippets/ in your browser.
 
 ## Creating the staging/production environment and deploying
 
+These steps will create a production environment in EC2 using Terraform.
+fabric will be used to automate deployment.
+
+* Install Terraform
+
+* Create the tfvars file in this directory
+```
+user_name = "<yourname>"
+environment = "<what you want to call this environment>"
+access_key = "####################"
+secret_key = "########################################"
+ssh_key_path = "<path 2 your key for connecting to ec2 instances>"
+ssh_key_name = "<name of the key>"
+vpc_id = "vpc-########"
+```
+
+* install fabric "pip install fabric"
+
+* run ```terraform plan``` to see a list of infrastructure to bring up.
+
+* run ```terraform apply``` to provision infrastructure
+
+* After provisioning your infrastructure deploy your code
+```fab deploy```
+
+* To see if the website is working
+```fab show_me```
+
+
+
 Thanks to http://www.django-rest-framework.org/ for the great tutorial which I used to get this example going.
 Also, thanks to https://github.com/jackdb/pg-app-dev-vm for the postgres provisioning script.
