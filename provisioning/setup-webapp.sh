@@ -5,7 +5,7 @@ sudo apt-get -y install python-pip
 sudo apt-get -y install libpq-dev
 sudo apt-get -y install python-dev
 sudo apt-get -y install emacs
-
+sudo pip install fabric
 #cd /vagrant/rest_demo
 #python manage.py makemigrations snippets
 #python manage.py migrate
