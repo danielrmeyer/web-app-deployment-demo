@@ -34,6 +34,7 @@ def grok_env(func):
 
 @grok_env
 def copy_code():
+    local("find . -type f -name '*.pyc' -delete"
     put('rest_demo', '/var/www')
 
 @grok_env
